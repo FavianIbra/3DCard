@@ -1,0 +1,108 @@
+$myColor1: #020e26;
+$myColor2: #ffffff;
+$myColor3: #b527cf;
+$myColor4: #3546f0;
+$myColor5: #3bd9d9;
+$myColor6: #8035f0;
+$myColor7: #ff9500;
+$myColor8: #d5cb0f;
+
+* {
+    font-family: "Roboto";
+}
+
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: $myColor1;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    perspective: 90rem;
+    perspective-origin: 30% 60%;
+}
+
+.div-transform {
+    display: flex;
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(-9deg) scale3d(1,1, -0.9) scale(1.1) translateX(50px);
+}
+.card{
+    background: url(assets/img/3dcard.jpeg);
+    color: $myColor2;
+    border-radius: 8px;
+    padding: 8px;
+    width: 244px;
+    transition: 0.5s ease;
+  overflow: hidden;
+  transform: translate(0);
+
+ ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+  }
+
+  h2{
+    text-transform: capitalize;
+  }
+  h4{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 48px;
+  }
+  
+
+}
+.card-1{
+    background-size: cover;
+    transform: scale(1.02);
+    margin-right: 40px;
+
+    :hover {
+        transform: scale(1.11);
+        box-shadow: -7px 4px 28px -3px $myColor3;
+    }
+
+  ::before{
+    background: linear-gradient(90deg, $myColor3 0%, $myColor4 100%);
+  }
+}
+
+.card-2 {
+    background-size: cover;
+    transform: scale(1.01);
+    margin-right: 31px;
+
+    :hover {
+        transform: scale(1.1);
+        box-shadow: -7px 4px 28px -3px $myColor5;
+    }
+
+    ::before {
+        background: linear-gradient(90deg, $myColor5 0%, $myColor6 100%);
+    }
+}
+ .card-3 {
+    background-size: cover;
+
+    :hover {
+        transform: scale(1.08);
+        box-shadow: -7px 4px 28px -3px $myColor7;
+    }
+    ::before {
+        background: linear-gradient(90deg, $myColor7 0%, $myColor8 100%);
+    }
+ }
+
